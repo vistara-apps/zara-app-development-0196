@@ -14,7 +14,7 @@ export default function Home() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Unlock the Power of <span className="text-primary-600">AI-Driven</span> Market Intelligence
+            Unlock the Power of <span className="text-blue-600">AI-Driven</span> Market Intelligence
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Get personalized investment insights, real-time market analysis, and AI-powered recommendations 
@@ -38,12 +38,12 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <FeatureCard 
-            icon={<Zap className="h-8 w-8 text-primary-600" />}
+            icon={<Zap className="h-8 w-8 text-blue-600" />}
             title="AI-Powered Analysis" 
             description="Advanced algorithms analyze market patterns and trends in real-time"
           />
           <FeatureCard 
-            icon={<Newspaper className="h-8 w-8 text-success-600" />}
+            icon={<Newspaper className="h-8 w-8 text-green-600" />}
             title="Real-time News" 
             description="Stay updated with breaking financial news from multiple sources"
           />
@@ -72,7 +72,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="text-lg font-bold">${index.price}</p>
-                  <div className={`flex items-center ${index.change >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+                  <div className={`flex items-center ${index.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {index.change >= 0 ? <TrendingUp size={16} /> : <TrendingDown size={16} />}
                     <span className="ml-1 text-sm font-medium">
                       {index.changePercent.toFixed(2)}%
@@ -100,10 +100,10 @@ export default function Home() {
           <p className="text-3xl font-bold text-gray-900">${user.investmentPortfolio.totalValue.toLocaleString()}</p>
           <div className="flex items-center mt-2">
             {user.investmentPortfolio.todayChange >= 0 ? 
-              <TrendingUp className="text-success-600" size={20} /> : 
-              <TrendingDown className="text-danger-600" size={20} />
+              <TrendingUp className="text-green-600" size={20} /> : 
+              <TrendingDown className="text-red-600" size={20} />
             }
-            <span className={`ml-2 font-medium ${user.investmentPortfolio.todayChange >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+            <span className={`ml-2 font-medium ${user.investmentPortfolio.todayChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               ${Math.abs(user.investmentPortfolio.todayChange).toFixed(2)} ({user.investmentPortfolio.todayChangePercent}%)
             </span>
           </div>
@@ -151,7 +151,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-between">
                 <p className="text-lg font-bold">${index.price}</p>
-                <div className={`flex items-center ${index.change >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+                <div className={`flex items-center ${index.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                   {index.change >= 0 ? <TrendingUp size={16} /> : <TrendingDown size={16} />}
                   <span className="ml-1 text-sm font-medium">
                     {index.changePercent.toFixed(2)}%

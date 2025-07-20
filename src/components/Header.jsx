@@ -10,7 +10,7 @@ export default function Header() {
     <header className="bg-white border-b border-gray-200 px-8 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <h1 className="text-2xl font-bold text-primary-600">MarketEdge</h1>
+          <h1 className="text-2xl font-bold text-blue-600">MarketEdge</h1>
           {isPremium && (
             <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs font-medium rounded-full">
               Premium

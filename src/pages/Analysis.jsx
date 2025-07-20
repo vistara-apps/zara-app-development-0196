@@ -46,7 +46,7 @@ export default function Analysis() {
       <div className="card mb-8">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-semibold flex items-center">
-            <Brain className="mr-2 text-primary-600" />
+            <Brain className="mr-2 text-blue-600" />
             Generate Market Analysis
           </h2>
           {!isPremium && (
@@ -102,7 +102,7 @@ export default function Analysis() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="card">
               <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <TrendingUp className="mr-2 text-success-600" />
+                <TrendingUp className="mr-2 text-green-600" />
                 Market Trends
               </h3>
               <div className="space-y-3">
@@ -187,7 +187,6 @@ export default function Analysis() {
               <button
                 onClick={() => {
                   setShowPremiumModal(false);
-                  // Navigate to pricing
                 }}
                 className="btn-primary flex-1"
               >

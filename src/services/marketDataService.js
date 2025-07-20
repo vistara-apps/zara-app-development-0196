@@ -1,9 +1,7 @@
 import { aiService } from './aiService';
 
 class MarketDataService {
-  // Mock data for demonstration - in production, this would connect to Yahoo Finance API
   async getMarketOverview() {
-    // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     return {

@@ -16,7 +16,32 @@ export default function News() {
     { value: 'markets', label: 'Markets' },
   ];
 
-  const filteredNews = marketData.news.filter(article => {
+  const allNews = [
+    ...marketData.news,
+    {
+      id: 4,
+      title: 'Tesla Reports Strong Q4 Delivery Numbers',
+      content: 'Electric vehicle manufacturer Tesla exceeded expectations with record quarterly deliveries, boosting investor confidence...',
+      source: 'MarketWatch',
+      timestamp: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString()
+    },
+    {
+      id: 5,
+      title: 'Apple Unveils New AI Features for iPhone',
+      content: 'Apple announced significant AI enhancements coming to iOS, focusing on personal productivity and privacy-first features...',
+      source: 'TechCrunch',
+      timestamp: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString()
+    },
+    {
+      id: 6,
+      title: 'Banking Sector Sees Mixed Results in Latest Earnings',
+      content: 'Major banks report varied performance with some exceeding expectations while others face headwinds from economic uncertainty...',
+      source: 'CNN Business',
+      timestamp: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
+    }
+  ];
+
+  const filteredNews = allNews.filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.content.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesSearch;
@@ -62,31 +87,6 @@ export default function News() {
         {filteredNews.map((article) => (
           <NewsCard key={article.id} article={article} />
         ))}
-        
-        {/* Additional mock news articles */}
-        <NewsCard article={{
-          id: 4,
-          title: 'Tesla Reports Strong Q4 Delivery Numbers',
-          content: 'Electric vehicle manufacturer Tesla exceeded expectations with record quarterly deliveries, boosting investor confidence...',
-          source: 'MarketWatch',
-          timestamp: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString()
-        }} />
-        
-        <NewsCard article={{
-          id: 5,
-          title: 'Apple Unveils New AI Features for iPhone',
-          content: 'Apple announced significant AI enhancements coming to iOS, focusing on personal productivity and privacy-first features...',
-          source: 'TechCrunch',
-          timestamp: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString()
-        }} />
-        
-        <NewsCard article={{
-          id: 6,
-          title: 'Banking Sector Sees Mixed Results in Latest Earnings',
-          content: 'Major banks report varied performance with some exceeding expectations while others face headwinds from economic uncertainty...',
-          source: 'CNN Business',
-          timestamp: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString()
-        }} />
       </div>
 
       {filteredNews.length === 0 && (

@@ -3,8 +3,6 @@ import { useAuth } from '../contexts/AuthContext';
 import { useMarketData } from '../contexts/MarketDataContext';
 import { TrendingUp, TrendingDown, DollarSign, Activity } from 'lucide-react';
 import {
-  LineChart,
-  Line,
   AreaChart,
   Area,
   XAxis,
@@ -116,7 +114,7 @@ export default function Dashboard() {
                 </div>
                 <div className="text-right">
                   <p className="font-medium">${index.price}</p>
-                  <div className={`flex items-center ${index.change >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+                  <div className={`flex items-center ${index.change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                     {index.change >= 0 ? <TrendingUp size={16} /> : <TrendingDown size={16} />}
                     <span className="ml-1 text-sm">{index.changePercent.toFixed(2)}%</span>
                   </div>
@@ -171,7 +169,7 @@ function StatCard({ title, value, change, changePercent, icon }) {
           <p className="text-sm text-gray-600">{title}</p>
           <p className="text-2xl font-bold text-gray-900">{value}</p>
           {change !== undefined && (
-            <div className={`flex items-center mt-1 ${change >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+            <div className={`flex items-center mt-1 ${change >= 0 ? 'text-green-600' : 'text-red-600'}`}>
               {change >= 0 ? <TrendingUp size={16} /> : <TrendingDown size={16} />}
               <span className="ml-1 text-sm font-medium">
                 {changePercent}% today
@@ -191,9 +189,9 @@ function ActivityItem({ type, symbol, shares, price, amount, time }) {
   const getTypeInfo = (type) => {
     switch (type) {
       case 'buy':
-        return { label: 'Bought', color: 'text-success-600', bg: 'bg-success-50' };
+        return { label: 'Bought', color: 'text-green-600', bg: 'bg-green-50' };
       case 'sell':
-        return { label: 'Sold', color: 'text-danger-600', bg: 'bg-danger-50' };
+        return { label: 'Sold', color: 'text-red-600', bg: 'bg-red-50' };
       case 'dividend':
         return { label: 'Dividend', color: 'text-blue-600', bg: 'bg-blue-50' };
       default:

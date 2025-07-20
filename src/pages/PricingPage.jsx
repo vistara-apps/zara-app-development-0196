@@ -56,7 +56,6 @@ export default function PricingPage() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {/* Free Plan */}
         <div className="card relative">
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900">Free</h2>
@@ -84,10 +83,9 @@ export default function PricingPage() {
           </button>
         </div>
 
-        {/* Premium Plan */}
-        <div className="card relative border-2 border-primary-500">
+        <div className="card relative border-2 border-blue-500">
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <span className="bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+            <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
               Most Popular
             </span>
           </div>
@@ -137,7 +135,6 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* Features Comparison */}
       <div className="mt-16">
         <h2 className="text-2xl font-bold text-center mb-8">Feature Comparison</h2>
         <div className="card">
@@ -165,7 +162,6 @@ export default function PricingPage() {
         </div>
       </div>
 
-      {/* FAQ */}
       <div className="mt-16">
         <h2 className="text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
         <div className="grid md:grid-cols-2 gap-6">

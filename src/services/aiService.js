@@ -34,7 +34,6 @@ class AIService {
 
       const analysisText = completion.choices[0].message.content;
       
-      // Parse the AI response into structured data
       return {
         symbol,
         timestamp: new Date().toISOString(),
@@ -87,7 +86,6 @@ class AIService {
 
       const recommendationsText = completion.choices[0].message.content;
       
-      // Generate structured recommendations
       return [
         {
           id: 1,

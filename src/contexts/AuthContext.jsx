@@ -16,7 +16,6 @@ export function AuthProvider({ children }) {
   const [isPremium, setIsPremium] = useState(false);
 
   useEffect(() => {
-    // Check for existing session
     const savedUser = localStorage.getItem('marketEdgeUser');
     const savedPremium = localStorage.getItem('marketEdgePremium');
     
@@ -33,7 +32,6 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const userData = {
@@ -58,7 +56,6 @@ export function AuthProvider({ children }) {
 
   const register = async (name, email, password) => {
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       const userData = {

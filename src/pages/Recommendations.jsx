@@ -69,7 +69,7 @@ export default function Recommendations() {
 
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold flex items-center">
-          <Target className="mr-2 text-primary-600" />
+          <Target className="mr-2 text-blue-600" />
           Your Recommendations
         </h2>
         {isPremium && (
@@ -106,7 +106,6 @@ export default function Recommendations() {
         </div>
       ) : (
         <div className="grid gap-6">
-          {/* Show sample recommendations for non-premium users */}
           <div className="relative">
             <div className="absolute inset-0 bg-white bg-opacity-75 flex items-center justify-center z-10">
               <div className="text-center">
@@ -171,7 +170,6 @@ export default function Recommendations() {
               <button
                 onClick={() => {
                   setShowPremiumModal(false);
-                  // Navigate to pricing
                 }}
                 className="btn-primary flex-1"
               >

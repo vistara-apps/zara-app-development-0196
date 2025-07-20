@@ -40,7 +40,7 @@ export default function Portfolio() {
   if (isLoading) {
     return (
       <div className="text-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600 mx-auto"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
         <p className="mt-4">Loading portfolio...</p>
       </div>
     );
@@ -94,7 +94,7 @@ export default function Portfolio() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Today's Change</p>
-              <p className={`text-2xl font-bold ${portfolioData.performance.todayChange >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+              <p className={`text-2xl font-bold ${portfolioData.performance.todayChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 ${Math.abs(portfolioData.performance.todayChange).toFixed(2)}
               </p>
               <div className="flex items-center">
@@ -105,8 +105,8 @@ export default function Portfolio() {
               </div>
             </div>
             {portfolioData.performance.todayChange >= 0 ? 
-              <TrendingUp className="h-8 w-8 text-success-600" /> : 
-              <TrendingDown className="h-8 w-8 text-danger-600" />
+              <TrendingUp className="h-8 w-8 text-green-600" /> : 
+              <TrendingDown className="h-8 w-8 text-red-600" />
             }
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function Portfolio() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Month Change</p>
-              <p className={`text-2xl font-bold ${portfolioData.performance.monthChange >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+              <p className={`text-2xl font-bold ${portfolioData.performance.monthChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 ${Math.abs(portfolioData.performance.monthChange).toFixed(2)}
               </p>
               <p className="text-sm text-gray-600">
@@ -130,7 +130,7 @@ export default function Portfolio() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Year Change</p>
-              <p className={`text-2xl font-bold ${portfolioData.performance.yearChange >= 0 ? 'text-success-600' : 'text-danger-600'}`}>
+              <p className={`text-2xl font-bold ${portfolioData.performance.yearChange >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 ${Math.abs(portfolioData.performance.yearChange).toFixed(2)}
               </p>
               <p className="text-sm text-gray-600">
